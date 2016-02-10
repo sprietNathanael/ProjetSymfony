@@ -1,0 +1,3 @@
+gestion_etudiant_homepage:
+    path:     /
+    defaults: { _controller: GestionEtudiantBundle:Default:index }

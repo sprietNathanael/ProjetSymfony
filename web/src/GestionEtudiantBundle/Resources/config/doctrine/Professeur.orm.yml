@@ -1,0 +1,18 @@
+GestionEtudiantBundle\Entity\Professeur:
+    type: entity
+    table: professeur
+    repositoryClass: GestionEtudiantBundle\Repository\ProfesseurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
