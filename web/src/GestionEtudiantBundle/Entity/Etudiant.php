@@ -2,6 +2,7 @@
 
 namespace GestionEtudiantBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,18 @@ class Etudiant
      */
     private $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Note", mappedBy="numEtu")
+     */
+    private $notes;
+
+    /**
+     * Etudiant constructor.
+     */
+    public function __construct()
+    {
+        $this->notes = new ArrayCollection();
+    }
 
 
     /**
@@ -61,5 +74,38 @@ class Etudiant
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Add notes
+     *
+     * @param \GestionEtudiantBundle\Entity\Note $notes
+     * @return Etudiant
+     */
+    public function addNote(\GestionEtudiantBundle\Entity\Note $notes)
+    {
+        $this->notes[] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Remove notes
+     *
+     * @param \GestionEtudiantBundle\Entity\Note $notes
+     */
+    public function removeNote(\GestionEtudiantBundle\Entity\Note $notes)
+    {
+        $this->notes->removeElement($notes);
+    }
+
+    /**
+     * Get notes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getNotes()
+    {
+        return $this->notes;
     }
 }

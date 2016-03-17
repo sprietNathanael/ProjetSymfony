@@ -10,6 +10,7 @@ class AccueilController extends Controller
         $em = $this->getDoctrine()->getManager();
         $products = $em->getRepository('GestionEtudiantBundle:Ue')
             ->findBy(['semestre' => $id]);
+
         return $this->render('GestionEtudiantBundle:Default:listemodules.html.twig', array("ues"=>$products));
     }
 
@@ -17,11 +18,12 @@ class AccueilController extends Controller
 
     public function indexAction(){
         $em = $this->getDoctrine()->getManager();
-        $semestre = $em->getRepository('GestionEtudiantBundle:Ue')->createQueryBuilder('ue')
-            ->select('ue.semestre')
-            ->groupBy('ue.semestre')
+        $notes = $em->getRepository('GestionEtudiantBundle:Note')->createQueryBuilder('note')
+            ->select('note')
             ->getQuery()->getResult();
-
+        foreach($notes as $note){
+            
+        }
         return $this->render('GestionEtudiantBundle:Default:listesemestre.html.twig', array("semestres"=>$semestre));
     }
 }
