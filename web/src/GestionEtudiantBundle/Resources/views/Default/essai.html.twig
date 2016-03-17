@@ -1,0 +1,6 @@
+{% extends "GestionEtudiantBundle::index.html.twig"%}
+{%block container%}
+{% for n in notes %}
+    {{ n.idModule.id }}
+{% endfor%}
+{%endblock%}

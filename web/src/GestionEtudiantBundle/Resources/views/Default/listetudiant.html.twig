@@ -12,6 +12,9 @@
                     <span class="mdl-list__item-secondary-content">
                         <a class="mdl-list__item-secondary-action" href="{{url('gestion_etudiant_fiche',{'id':etudiant.id})}}"><i class="material-icons">info</i></a>
                     </span>
+                    {% for note in etudiant.notes %}
+                        {{ note.note }}
+                    {% endfor %}
                 </li>
             {% endfor %}
         </ul>
