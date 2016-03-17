@@ -1,0 +1,11 @@
+<?php
+$pdo = new PDO("mysql:host=gigondas;dbname=godichea;charset=utf8","godichea", "godichea");
+$stmt = $pdo->prepare("INSERT INTO Etudiants (id, nom_prenom) values (:id, :nom_prenom)");
+
+$f = fopen("S1-13-14.csv", "r");
+$entete = fgetcsv($f, 512, ";");
+while ($ligne = fgetcsv($f, 512, ";")) {
+    print_r($ligne);
+}
+fclose($f);
+?>

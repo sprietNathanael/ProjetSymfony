@@ -1,4 +1,4 @@
-projet_symfony
-==============
+web
+===
 
-A Symfony project created on February 6, 2016, 12:00 pm.
+A Symfony project created on February 18, 2016, 11:15 am.

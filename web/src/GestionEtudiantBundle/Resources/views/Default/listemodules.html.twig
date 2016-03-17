@@ -1,0 +1,25 @@
+{% extends "GestionEtudiantBundle::index.html.twig" %}
+{% block container %}
+
+    {% for ue in ues %}
+        <div class="mdl-card mdl-shadow--2dp" style="width:400px; margin: 20px auto;">
+            <span>{{ ue.nomUe }}</span>
+            <ul>
+
+                {% for module in ue.modules %}
+                    <li>
+                        <span>{{ module.nomModule }}</span>
+                        <ul class="mdl-list">
+
+                            {% for note in module.getNotes() %}
+                                <li>{{ note.numEtu.nom }} {{ note.annee }} {{ note.note }}</li>
+                            {% endfor %}
+                        </ul>
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+{% endblock %}

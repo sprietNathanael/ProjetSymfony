@@ -1,3 +1,15 @@
-gestion_etudiant_homepage:
+gestion_etudiant_modules:
+    path:     /{id}
+    defaults: { _controller: GestionEtudiantBundle:Accueil:modules }
+
+gestion_etudiant_accueil:
     path:     /
-    defaults: { _controller: GestionEtudiantBundle:Default:index }
+    defaults: { _controller: GestionEtudiantBundle:Accueil:index }
+
+gestion_etudiant_homepage:
+    path:     /etudiants/
+    defaults: { _controller: GestionEtudiantBundle:Etudiant:index }
+
+gestion_etudiant_fiche:
+    path:     /etudiants/{id}
+    defaults: { _controller: GestionEtudiantBundle:Etudiant:fiche }

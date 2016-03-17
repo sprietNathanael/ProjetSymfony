@@ -1,0 +1,6 @@
+{% extends "GestionEtudiantBundle::index.html.twig" %}
+{% block container %}
+    {% for semestre in semestres %}
+        <li><a href="http://localhost/ProjetSymfony/web/web/app_dev.php/{{ semestre["semestre"] }}">{{ semestre["semestre"] }}</a></li>
+    {% endfor %}
+{% endblock %}

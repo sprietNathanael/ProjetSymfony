@@ -1,0 +1,13 @@
+S1;UE11;MIN1U100;Bases de l'informatique;17
+S1;UE12;MIN1U200;Bases de culture scientifique, sociale et humaine de l'informatique;13
+S2;UE21;MIN2U100;Approfondissements en informatique ;16
+S2;UE22;MIN2U200;Approfondissements en culture scientifique, sociale et humaine ;14
+S3;UE31;MIN3U100;Informatique avancée;12
+S3;UE32;MIN3U200;Culture scientifique, sociale et humaine avancées ;12
+S3;UE33;MIN3U300;Méthodologie et Projets;6
+S4-AP;UE41P;MIN4U1P0;Compléments en informatique;10
+S4-AP;UE42P;MIN4U2P0;Compléments de culture scientifique, sociale et humaine;8
+S4-AP;UE43P;MIN4U3P0;Mise en situation professionnelle;12
+S4-AT;UE41T;MIN4U1T0;Compléments en informatique;10
+S4-AT;UE42T;MIN4U2T0;Compléments de culture scientifique, sociale et humaine;8
+S4-AT;UE43T;MIN4U3T0;Mise en situation professionnelle;12

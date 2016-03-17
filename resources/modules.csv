@@ -1,0 +1,64 @@
+UE11;S1;MIN11100;Introduction aux systèmes informatiques;3,5;genthial
+UE11;S1;MIN11200;Introduction à l'algorithmique et à la programmation;3,5;luccia
+UE11;S1;MIN11300;Structures de données et algorithmes fondamentaux;2,5;luccia
+UE11;S1;MIN11400;Introduction aux bases de données;3,5;occellom
+UE11;S1;MIN11500;Conception de documens et d'interfaces numériques;2,5;merciera
+UE11;S1;MIN11600;Projet tutoré - Découverte;1,5;objois
+UE12;S1;MIN12100;Mathématiques discrètes;2,5;charenss
+UE12;S1;MIN12200;Algèbre linéaire;2;charenss
+UE12;S1;MIN12300;Environnement économique;1,5;galdons
+UE12;S1;MIN12400;Fonctionnement des organisations;2,5;prott
+UE12;S1;MIN12500;Expression-Communication – Fondamentaux de la communication;2;desauzag
+UE12;S1;MIN12600;Anglais et Informatique ;1,5;metgec
+UE12;S1;MIN12700;PPP - Connaître le monde professionnel;1;occellom
+UE21;S2;MIN21100;Architecture et programmation des mécanismes de base d'un système informatique;1,5;objois
+UE21;S2;MIN21200;Architecture des réseaux;1,5;objois
+UE21;S2;MIN21300;Bases de la programmation orientée objet;3,5;jean
+UE21;S2;MIN21400;Bases de la conception orientée objet ;2,5;occellom
+UE21;S2;MIN21500;Introduction aux interfaces homme-machine (IHM);2,5;valentij
+UE21;S2;MIN21600;Programmation et administration des bases de données;2,5;boulled
+UE21;S2;MIN21700;Projet tutoré – Description et planification de projet;2;jean
+UE22;S2;MIN22100;Graphes et langages;2,5;charenss
+UE22;S2;MIN22200;Analyse et méthodes numériques;2;charenss
+UE22;S2;MIN22300;Environnement comptable, financier, juridique et social;3;prott
+UE22;S2;MIN22400;Gestion de projet informatique;1,5;prott
+UE22;S2;MIN22500;Expression-Communication – Communication, information et argumentation;1,5;desauzag
+UE22;S2;MIN22600;Communiquer en anglais ;2,5;metgec
+UE22;S2;MIN22700;PPP – Identifier ses compétences;1;bergeron
+UE31;S3;MIN31100;Principes des systèmes d'exploitation;2,5;raievskc
+UE31;S3;MIN31200;Services réseaux;1,5;objois
+UE31;S3;MIN31300;Algorithmique avancée;1,5;luccia
+UE31;S3;MIN31400;Programmation Web côté serveur;2,5;genthial
+UE31;S3;MIN31500;Conception et programmation objet avancées;2,5;jean
+UE31;S3;MIN31600;Bases de données avancées;1,5;boulled
+UE32;S3;MIN32100;Probabilités et statistiques;2,5;charenss
+UE32;S3;MIN32200;Modélisations mathématiques;1,5;charenss
+UE32;S3;MIN32300;Droit des technologies de l’information et de la communication (TIC);1,5;bardv
+UE32;S3;MIN32400;Gestion des systèmes d'information;2,5;prott
+UE32;S3;MIN32500;Expression-Communication – Communication professionnelle;1,5;desauzag
+UE32;S3;MIN32600;Collaborer en anglais ;2,5;metgec
+UE33;S3;MIN33100;Méthodologie de la production d’applications;3;occellom
+UE33;S3;MIN33200;Projet tutoré – Mise en situation professionnelle;2;metgec
+UE33;S3;MIN33300;PPP – Préciser son projet;1;bergeron
+UE41P;S4-AP;MIN411P0P;Administration système et réseau;1,5;michefre
+UE41P;S4-AP;MIN41200P;Programmation répartie;1,5;genthial
+UE41P;S4-AP;MIN413P0P;Programmation Web - client riche;1,5;genthial
+UE41P;S4-AP;MIN41400P;Conception et développement d'applications mobiles;1,5;raievskc
+UE41P;S4-AP;MIN415P0P;Compléments d'informatique en vue d'une insertion immédiate;1,5;lagrezea
+UE41P;S4-AP;MIN41600P;Projets tutorés - Compléments;2,5;metgec
+UE42P;S4-AP;MIN421P0P;Ateliers de création d'entreprise;2;droito
+UE42P;S4-AP;MIN42200P;Recherche opérationnelle et aide à la décision;2;charenss
+UE42P;S4-AP;MIN423P0P;Expression-communication - Communiquer dans les organisations;2;desauzag
+UE42P;S4-AP;MIN424P0P;Travailler en anglais;2;metgec
+UE43P;S4-AP;MIN43100P;Stage professionnel;12;objois
+UE41T;S4-AT;MIN411T0T;Informatique théorique;1,5;benyellc
+UE41T;S4-AT;MIN41200T;Programmation répartie;1,5;genthial
+UE41T;S4-AT;MIN413T0T;Programmation multi-style;1,5;luccia
+UE41T;S4-AT;MIN41400T;Conception et développement d'applications mobiles;1,5;raievskc
+UE41T;S4-AT;MIN415T0T;Informatique embarquée;1,5;lagrezea
+UE41T;S4-AT;MIN41600T;Projets tutorés - Compléments;2,5;metgec
+UE42T;S4-AT;MIN421T0T;Mathématiques AT;2;charenss
+UE42T;S4-AT;MIN42200T;Recherche opérationnelle et aide à la décision;2;charenss
+UE42T;S4-AT;MIN423T0T;Expression-communication AT;2;desauzag
+UE42T;S4-AT;MIN424T0T;Anglais AT;2;amblardm
+UE43T;S4-AT;MIN43100T;Stage professionnel;12;objois

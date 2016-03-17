@@ -1,0 +1,68 @@
+<?php
+
+namespace GestionEtudiantBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UsersGroups
+ */
+class UsersGroups
+{
+    /**
+     * @var string
+     */
+    private $moduleId;
+
+    /**
+     * @var integer
+     */
+    private $etudiantId;
+
+
+    /**
+     * Set moduleId
+     *
+     * @param string $moduleId
+     * @return UsersGroups
+     */
+    public function setModuleId($moduleId)
+    {
+        $this->moduleId = $moduleId;
+
+        return $this;
+    }
+
+    /**
+     * Get moduleId
+     *
+     * @return string 
+     */
+    public function getModuleId()
+    {
+        return $this->moduleId;
+    }
+
+    /**
+     * Set etudiantId
+     *
+     * @param integer $etudiantId
+     * @return UsersGroups
+     */
+    public function setEtudiantId($etudiantId)
+    {
+        $this->etudiantId = $etudiantId;
+
+        return $this;
+    }
+
+    /**
+     * Get etudiantId
+     *
+     * @return integer 
+     */
+    public function getEtudiantId()
+    {
+        return $this->etudiantId;
+    }
+}
