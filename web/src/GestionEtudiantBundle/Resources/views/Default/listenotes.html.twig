@@ -1,0 +1,15 @@
+{% extends "GestionEtudiantBundle::index.html.twig" %}
+{% block container %}
+
+    {% for annee in notes %}
+        <div>
+            <h2>{{ annee[0].annee }}</h2>
+            <ul>
+                {% for note in annee %}
+                    <li>{{ note.numEtu.nom }} {{ note.note }}</li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    {% endfor %}
+{% endblock %}
