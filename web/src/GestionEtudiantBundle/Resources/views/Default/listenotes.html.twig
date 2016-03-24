@@ -1,12 +1,27 @@
 {% extends "GestionEtudiantBundle::index.html.twig" %}
 {% block container %}
-
+    
+<style>
+    .demo-list-icon {
+      width: 100%;
+    }
+</style>
+<center>
+    <h1>
+{{nomModule}}
+    </h1>
+</center>
     {% for annee in notes %}
         <div>
             <h2>{{ annee[0].annee }}</h2>
-            <ul>
+            <ul class="demo-list-icon mdl-list">
                 {% for note in annee %}
-                    <li>{{ note.numEtu.nom }} {{ note.note }}</li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon">person</i>
+                            {{ note.numEtu.nom }} {{ note.note }}
+                        </span>
+                    </li>
                 {% endfor %}
             </ul>
         </div>

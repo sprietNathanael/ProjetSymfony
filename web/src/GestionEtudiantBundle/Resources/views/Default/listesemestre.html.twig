@@ -1,6 +1,35 @@
 {% extends "GestionEtudiantBundle::index.html.twig" %}
 {% block container %}
+    <style>
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 250px;
+  background: url('http://intranet.iut-valence.fr/web/intranet/annuaire/photos/genthial.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#img_S4-AP{
+    background: url('https://pbs.twimg.com/profile_images/1751631729/dG-byLili-petit_400x400.jpg') center / cover;
+}
+
+#img_S4-AT{
+    background: url('https://lh3.googleusercontent.com/-0pf1HTcru6M/AAAAAAAAAAI/AAAAAAAAAAA/wOqmesBNQuk/photo.jpg') center / cover;
+}
+        </style>
+        <div class="mdl-grid">
     {% for semestre in semestres %}
-        <li><a href="{{ path('gestion_etudiant_modules', {'id':semestre["semestre"]}) }}">{{ semestre["semestre"] }}</a></li>
+        <div class="mdl-cell mdl-cell--4-col demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title" id="img_{{ semestre["semestre"] }}">
+                <h2 class="mdl-card__title-text">{{ semestre["semestre"] }}</h2>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a href="{{ path('gestion_etudiant_modules', {'id':semestre["semestre"]}) }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Consulter
+                </a>
+            </div>
+        </div>
     {% endfor %}
+    </div>
 {% endblock %}

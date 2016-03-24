@@ -1,13 +1,22 @@
 {% extends "GestionEtudiantBundle::index.html.twig" %}
 {% block container %}
 
+<style>
+    .demo-list-icon {
+      width: 100%;
+    }
+</style>
+    
     {% for ue in ues %}
         <div class="mdl-card mdl-shadow--2dp" style="width:1400px; margin: 20px auto;">
             <span>{{ ue.nomUe }}</span>
-            <ul>
+            <ul class="demo-list-icon mdl-list">
                 {% for module in ue.modules %}
-                    <li>
-                        <a href="{{ path('gestion_etudiant_notes', {'id_module':module.id}) }}">{{ module.nomModule }}</a>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon">label</i>
+                            <a href="{{ path('gestion_etudiant_notes', {'id_module':module.id}) }}">{{ module.nomModule }}</a>
+                        </span>
                     </li>
                 {% endfor %}
             </ul>

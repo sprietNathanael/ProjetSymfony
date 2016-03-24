@@ -136,6 +136,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // gestion_etudiant_notes
+        if (preg_match('#^/(?P<id_module>[^/]++)/notes$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'gestion_etudiant_notes')), array (  '_controller' => 'GestionEtudiantBundle\\Controller\\NotesController::indexAction',));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

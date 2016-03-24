@@ -16,6 +16,7 @@ class NotesController extends Controller
             $tableau[$note->getAnnee()][] = $note;
 
         }
-        return $this->render('GestionEtudiantBundle:Default:listenotes.html.twig', array("notes" => $tableau));
+        $nom_module = $products[0]->getIdModule()->getNomModule();
+        return $this->render('GestionEtudiantBundle:Default:listenotes.html.twig', array("notes" => $tableau, "nomModule" => $nom_module));
     }
 }
