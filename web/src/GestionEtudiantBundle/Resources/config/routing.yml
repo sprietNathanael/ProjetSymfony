@@ -16,3 +16,6 @@ gestion_etudiant_fiche:
 gestion_etudiant_notes:
     path:     /{id_module}/notes
     defaults: { _controller: GestionEtudiantBundle:Notes:index}
+gestion_etudiant_decision:
+    path:     /{id_etudiant}/decision
+    defaults: { _controller: GestionEtudiantBundle:Notes:index}

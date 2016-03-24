@@ -1,0 +1,14 @@
+{% extends "GestionEtudiantBundle::index.html.twig" %}
+{% block container %}
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col"></div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                <form>
+                    <textarea name="decision" />
+                    <input type="submit" value="valider"/>
+                </form>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col"></div>
+{% endblock %}

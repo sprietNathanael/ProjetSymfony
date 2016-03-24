@@ -5,24 +5,28 @@
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
             <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                <table>
-                    <thead>
-                    <th>Module</th>
-                    <th>note</th>
-                    <th></th>
-                    </thead>
-                    <tbody>
-                    {% for note in etudiant.notes %}
-                        <tr>
-                            <td>{{ note.idModule.nomModule }}</td>
-                            <td>{{ note.note }}</td>
-                            <td><a><i class="material-icons" title="Inserrer un avis">insert_comment</i></a> </td>
-                        </tr>
+                {% for key,annee in tableau %}
+                    {{ key }}
+                    {% for cleSemestre,semestre in annee %}
+                        <table>
+                            <thead>
+                            <th>{{ cleSemestre }}</th>
+                            <th>note</th>
+                            <th><a><i class="material-icons" title="Inserrer un avis">insert_comment</i></a></th>
+                            </thead>
+                            <tbody>
+                            {% for note in semestre %}
+                                <tr>
+                                    <td>{{ note.idModule.nomModule }}</td>
+                                    <td>{{ note.note }}</td>
+                                </tr>
 
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
                     {% endfor %}
-                    </tbody>
-
-                </table>
+                {% endfor %}
 
                 <h1>Avis Pour chaque trimestre</h1>
 

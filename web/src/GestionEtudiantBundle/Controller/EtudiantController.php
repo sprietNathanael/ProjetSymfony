@@ -17,6 +17,10 @@ class EtudiantController extends Controller
         $etudiant = $this->getDoctrine()
             ->getRepository('GestionEtudiantBundle:Etudiant')
             ->find($id);
-        return $this->render('GestionEtudiantBundle:Default:fiche.html.twig', array("etudiant"=>$etudiant));
+        $tableau = [];
+        foreach($etudiant->getNotes() as $note){
+            $tableau[$note->getAnnee()][$note->getIdModule()->getIdUe()->getSemestre()][] = $note;
+        }
+        return $this->render('GestionEtudiantBundle:Default:fiche.html.twig', array("etudiant"=>$etudiant, "tableau"=>$tableau));
     }
 }
