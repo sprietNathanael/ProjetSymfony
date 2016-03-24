@@ -3,6 +3,11 @@
         <title>Gestion des étudiants</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+        <style>
+            .material-icons{
+                cursor: pointer;
+            }
+        </style>
         <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
     </head>
     <body>
@@ -16,20 +21,16 @@
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
+                        <a class="mdl-navigation__link" href="{{url('gestion_etudiant_accueil')}}">Semestre</a>
+                        <a class="mdl-navigation__link" href="{{url('gestion_etudiant_homepage')}}">Etudiants</a>
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Title</span>
+                <span class="mdl-layout-title"></span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="{{url('gestion_etudiant_accueil')}}">Semestre</a>
+                    <a class="mdl-navigation__link" href="{{url('gestion_etudiant_homepage')}}">Etudiants</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">

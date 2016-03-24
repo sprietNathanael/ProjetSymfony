@@ -1,19 +1,45 @@
-{% extends "GestionEtudiantBundle::index.html.twig"%}
-{%block container%}
-    <h1 class="mdl-typography--text-center">{{etudiant.nom}} ({{etudiant.id}})</h1>
+{% extends "GestionEtudiantBundle::index.html.twig" %}
+{% block container %}
+    <h1 class="mdl-typography--text-center">{{ etudiant.nom }} ({{ etudiant.id }})</h1>
 
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
-            <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                <table>
+                    <thead>
+                    <th>Module</th>
+                    <th>note</th>
+                    <th></th>
+                    </thead>
+                    <tbody>
+                    {% for note in etudiant.notes %}
+                        <tr>
+                            <td>{{ note.idModule.nomModule }}</td>
+                            <td>{{ note.note }}</td>
+                            <td><a><i class="material-icons" title="Inserrer un avis">insert_comment</i></a> </td>
+                        </tr>
+
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+                <h1>Avis Pour chaque trimestre</h1>
+
+
                 <h2>Semestre 1</h2>
                 <!-- Pour chaque module du semestre-->
                 <div>
                     <!-- Remplacer le contenu des span par des {}Twig -->
                     <p><span>Nom module</span> (<span>Code Apogée</span>) - <span>Nom Prof</span></p>
+
                     <p></p>
+
                     <p>Avis du professeur</p>
+
                     <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" style="width:800px;"type="text" id="avis_prof"></textarea>
+                        <textarea class="mdl-textfield__input" style="width:800px;" type="text"
+                                  id="avis_prof"></textarea>
                     </div>
                     <div>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -21,6 +47,7 @@
                         </button>
                         <hr>
                     </div>
+
                 </div>
                 <!-- Fin Pour chaque module du semestre -->
             </div>
@@ -29,4 +56,4 @@
     <!-- Pour chaque semestre de la formation -->
 
     <!-- Fin Pour chaque semestre de la formation -->
-{%endblock%}
+{% endblock %}

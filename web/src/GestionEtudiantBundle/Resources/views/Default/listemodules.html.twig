@@ -4,17 +4,13 @@
     {% for ue in ues %}
         <div class="mdl-card mdl-shadow--2dp" style="width:1400px; margin: 20px auto;">
             <span>{{ ue.nomUe }}</span>
-
-
             <ul>
                 {% for module in ue.modules %}
                     <li>
-                        <a href="{{ path('gestion_etudiant_notes', {'id_module':module.id}) }}">{{ module.id }}</a>
+                        <a href="{{ path('gestion_etudiant_notes', {'id_module':module.id}) }}">{{ module.nomModule }}</a>
                     </li>
                 {% endfor %}
             </ul>
-
         </div>
     {% endfor %}
-
 {% endblock %}
