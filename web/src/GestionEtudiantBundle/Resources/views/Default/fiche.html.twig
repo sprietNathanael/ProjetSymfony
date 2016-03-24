@@ -12,7 +12,9 @@
                             <thead>
                             <th>{{ cleSemestre }}</th>
                             <th>note</th>
-                            <th><a><i class="material-icons" title="Inserrer un avis">insert_comment</i></a></th>
+                            <th><a href="{{ path('gestion_etudiant_decision',{'semestre':cleSemestre,'annee':key,'id_etudiant':etudiant.id}) }}">
+                                    <i class="material-icons" title="Inserrer un avis">insert_comment</i>
+                                </a></th>
                             </thead>
                             <tbody>
                             {% for note in semestre %}
