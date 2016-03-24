@@ -1,65 +1,28 @@
 {% extends "GestionEtudiantBundle::index.html.twig" %}
 {% block container %}
     <h1 class="mdl-typography--text-center">{{ etudiant.nom }} ({{ etudiant.id }})</h1>
+    {% for key,annee in tableau %}
+        <h3>{{ key }}</h3>
+        {% for cleSemestre,semestre in annee %}
+            <table>
+                <thead>
+                <th>{{ cleSemestre }}</th>
+                <th>note</th>
+                <th><a href="{{ path('gestion_etudiant_decision',{'semestre':cleSemestre,'annee':key,'id_etudiant':etudiant.id}) }}">
+                        <i class="material-icons" title="Inserrer un avis">insert_comment</i>
+                    </a></th>
+            </thead>
+            <tbody>
+                {% for note in semestre %}
+                    <tr>
+                        <td>{{ note.idModule.nomModule }}</td>
+                        <td>{{ note.note }}</td>
+                    </tr>
 
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col">
-            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                {% for key,annee in tableau %}
-                    {{ key }}
-                    {% for cleSemestre,semestre in annee %}
-                        <table>
-                            <thead>
-                            <th>{{ cleSemestre }}</th>
-                            <th>note</th>
-                            <th><a href="{{ path('gestion_etudiant_decision',{'semestre':cleSemestre,'annee':key,'id_etudiant':etudiant.id}) }}">
-                                    <i class="material-icons" title="Inserrer un avis">insert_comment</i>
-                                </a></th>
-                            </thead>
-                            <tbody>
-                            {% for note in semestre %}
-                                <tr>
-                                    <td>{{ note.idModule.nomModule }}</td>
-                                    <td>{{ note.note }}</td>
-                                </tr>
-
-                            {% endfor %}
-                            </tbody>
-
-                        </table>
-                    {% endfor %}
                 {% endfor %}
+            </tbody>
 
-                <h1>Avis Pour chaque trimestre</h1>
-
-
-                <h2>Semestre 1</h2>
-                <!-- Pour chaque module du semestre-->
-                <div>
-                    <!-- Remplacer le contenu des span par des {}Twig -->
-                    <p><span>Nom module</span> (<span>Code Apogée</span>) - <span>Nom Prof</span></p>
-
-                    <p></p>
-
-                    <p>Avis du professeur</p>
-
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" style="width:800px;" type="text"
-                                  id="avis_prof"></textarea>
-                    </div>
-                    <div>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                            Modifier
-                        </button>
-                        <hr>
-                    </div>
-
-                </div>
-                <!-- Fin Pour chaque module du semestre -->
-            </div>
-        </div>
-    </div>
-    <!-- Pour chaque semestre de la formation -->
-
-    <!-- Fin Pour chaque semestre de la formation -->
+        </table>
+    {% endfor %}
+{% endfor %}
 {% endblock %}

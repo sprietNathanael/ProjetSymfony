@@ -141,6 +141,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'gestion_etudiant_notes')), array (  '_controller' => 'GestionEtudiantBundle\\Controller\\NotesController::indexAction',));
         }
 
+        // gestion_etudiant_decision
+        if (0 === strpos($pathinfo, '/decision') && preg_match('#^/decision/(?P<annee>[^/]++)/(?P<semestre>[^/]++)/(?P<id_etudiant>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'gestion_etudiant_decision')), array (  '_controller' => 'GestionEtudiantBundle\\Controller\\DecisionController::indexAction',));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
